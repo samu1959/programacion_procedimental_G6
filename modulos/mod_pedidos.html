@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PEDIDOS</title>
 </head>
 <body>
-    <h1>PEDIDOS</h1>
-    <HR>
 
-               <div class="navbar-end">
+
+          <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item"> pedidos </a>
+
+    </div>
+    <div class="navbar-end">
       <div class="navbar-item">
         <div class="buttons">
           <a class="button is-primary" href="../index.html">
@@ -18,6 +23,92 @@
         </div>
       </div>
     </div>
-  </div>
-</nav>
- 
+
+<hr>
+
+<div class="columns is-multiline">
+
+    <div class="column is-half">
+        <div class="field">
+            <label class="label">Nombre</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Samuel">
+            </div>
+        </div>
+    </div>
+
+    <div class="column is-half">
+        <div class="field">
+            <label class="label">Dirección</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Calle 33 #29-13 Piso 2">
+            </div>
+        </div>
+    </div>
+
+    <div class="column is-half">
+        <div class="field">
+            <label class="label">Teléfono</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="3108507420">
+            </div>
+        </div>
+    </div>
+
+    <div class="column is-half">
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+                <input class="input" type="email" placeholder="ejemplo@gmail.com">
+            </div>
+        </div>
+    </div>
+
+    <div class="column is-half">
+        <div class="field">
+            <label class="label">Método de pago</label>
+            <div class="control">
+                <div class="select is-fullwidth">
+                    <select>
+                        <option>Selecciona método de pago</option>
+                        <option>Efectivo</option>
+                        <option>Tarjeta</option>
+                        <option>Nequi</option>
+                        <option>Daviplata</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="column is-half">
+        <div class="field">
+            <label class="label">Pedido</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Escribe tu pedido">
+            </div>
+        </div>
+    </div>
+
+    <div class="column is-full">
+        <div class="field">
+            <label class="label">Referencias</label>
+            <div class="control">
+                <textarea class="textarea" placeholder="Casa blanca al lado de la tienda"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="column is-half">
+        <button class="button is-link is-fullwidth">
+            Subir
+        </button>
+    </div>
+
+    <div class="column is-half">
+        <button class="button is-light is-fullwidth">
+            Cancelar
+        </button>
+    </div>
+
+</div>
