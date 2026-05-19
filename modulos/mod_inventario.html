@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+          <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item"> inventario </a>
 
@@ -24,57 +24,91 @@
       </div>
     </div>
 
-  </nav>
+<hr>
 
+<div class="columns is-multiline">
 
+    <div class="column is-half">
+        <div class="field">
+            <label class="label">Nombre</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Samuel">
+            </div>
+        </div>
+    </div>
 
+    <div class="column is-half">
+        <div class="field">
+            <label class="label">Dirección</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Calle 33 #29-13 Piso 2">
+            </div>
+        </div>
+    </div>
 
+    <div class="column is-half">
+        <div class="field">
+            <label class="label">Teléfono</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="3108507420">
+            </div>
+        </div>
+    </div>
 
-  <hr>
-  <table class="table">
-    <thead>
-      <tr>
-        <th><abbr title="nom_producto">nombre de producto </abbr></th>
-        <th><abbr title="cod_producto">codigo producto</abbr></th>
-        <th><abbr title="categoria">categoria</abbr></th>
-        <th><abbr title="prec_unitario">precio unitario</abbr></th>
-        <th><abbr title="descripcion">descripcion</abbr></th>
-        <th><abbr title="presentacion">presentacion</abbr></th>
-        <th><abbr title="marca">marca</abbr></th>
-        <th><abbr title="peso">peso</abbr></th>
+    <div class="column is-half">
+        <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+                <input class="input" type="email" placeholder="ejemplo@gmail.com">
+            </div>
+        </div>
+    </div>
 
-      </tr>
-    </thead>
+    <div class="column is-half">
+        <div class="field">
+            <label class="label">Método de pago</label>
+            <div class="control">
+                <div class="select is-fullwidth">
+                    <select>
+                        <option>Selecciona método de pago</option>
+                        <option>Efectivo</option>
+                        <option>Tarjeta</option>
+                        <option>Nequi</option>
+                        <option>Daviplata</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <tbody>
-      <tr>
-        <th>1</th>
-        <td>
+    <div class="column is-half">
+        <div class="field">
+            <label class="label">Pedido</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Escribe tu pedido">
+            </div>
+        </div>
+    </div>
 
-        </td>
-        <td>38</td>
-        <td>23</td>
-        <td>12</td>
-        <td>3</td>
-        <td>68</td>
-        <td>36</td>
-        <td>+32</td>
-        <td>81</td>
-        <td>
-          Qualification for the
-          <a href="https://en.wikipedia.org/wiki/2016%E2%80%9317_UEFA_Champions_League#Group_stage"
-            title="2016–17 UEFA Champions League">Champions League group stage</a>
-        </td>
-      </tr>
+    <div class="column is-full">
+        <div class="field">
+            <label class="label">Referencias</label>
+            <div class="control">
+                <textarea class="textarea" placeholder="Casa blanca al lado de la tienda"></textarea>
+            </div>
+        </div>
+    </div>
 
-    </tbody>
-  </table>
-</body>
+    <div class="column is-half">
+        <button class="button is-link is-fullwidth">
+            Subir
+        </button>
+    </div>
 
-</html>
-</body>
+    <div class="column is-half">
+        <button class="button is-light is-fullwidth">
+            Cancelar
+        </button>
+    </div>
 
-</html>
-</body>
-
-</html>
+</div>
