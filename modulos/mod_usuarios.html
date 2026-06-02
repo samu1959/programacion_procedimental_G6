@@ -5,163 +5,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>usuarios</title>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-      <link rel="stylesheet" href="../css/usuarios.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/usuarios.css">
 </head>
 
 <body>
-       <div class="contenedor" id="contenedor">
-    <h1>USUARIOS</h1>
-
-           <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary" href="../index.html">
-           <strong>home</strong> 
-          </a>
+    <div class="contenedor" id="contenedor">
+        <h1>USUARIOS</h1>
+        <div>
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="../index.html">
+                            <strong>home</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  
-</nav>
-  
 
- 
+        </nav>
 
-    <hr>
-    <div class="field">
-        <label class="label">nombre </label>
-        <div class="control">
-            <input class="input" type="text" placeholder="samuel">
+
+
+
+        <hr>
+        <div class="field">
+            <label class="label">nombre </label>
+            <div class="control">
+                <input class="input" id="nombre" type="text" placeholder="samuel">
+            </div>
         </div>
-    </div>
 
-    <div class="field">
-        <label class="label">usuario</label>
-        <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text" placeholder="ejemplo: (samx_09)">
-            <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-            </span>
-            <span class="icon is-small is-right">
-                <i class="fas fa-check"></i>
-            </span>
+        <div class="field">
+            <label class="label">usuario</label>
+            <div class="control has-icons-left has-icons-right">
+                <input class=input id="usuario"  is-success type="text" placeholder="ejemplo: (samx_09)">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                </span>
+                <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                </span>
+            </div>
+            <p class="help is-success">este usuario es valido </p>
         </div>
-        <p class="help is-success">este usuario es valido </p>
-    </div>
-
-
-
-
- 
-    <div class="field has-addons">
-        <p class="control">
-            <input class="input" type="text" placeholder="colocar tu email">
-        </p>
-        <p class="control">
-            <a class="button is-static">
-                @gmail.com
-            </a>
-        </p>
-    </div>
-   <div class="contraseña" id="contraseña">
-        <p class="control has-icons-left">
-            <input class="input" type="password" placeholder="Password">
-            <span class="icon is-small is-left">
-                <i class="fas fa-lock"></i>
-            </span>
-        </p>
-    </div>
-    <div class="field">
-        <p class="control">
-            <button class="button is-success">
-                Login
-            </button>
-        </p>
-    </div>
 
 
 
 
 
-
-
-
-
-    <div class="field">
-        <label class="label">numero de celular </label>
-        <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text" placeholder="ejemplo : 3108507420">
-            <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-            </span>
-            <span class="icon is-small is-right">
-                <i class="fas fa-check"></i>
-            </span>
+        <div class="field has-addons">
+            <p class="control">
+                <input class="input" id="email" type="text" placeholder="colocar tu email">
+            </p>
+            <p class="control">
+                <a class="button is-static">
+                    @gmail.com
+                </a>
+            </p>
         </div>
-    </div>
+        <div class="contraseña" id="contraseña">
+            <p class="control has-icons-left">
+                <input class="input" id="contraseña" type="password" placeholder="Password">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                </span>
+            </p>
+        </div>
+        <div class="field">
+            <p class="control">
+                <button class="button is-success">
+                    Login
+                </button>
+            </p>
+        </div>
+
+
+
+
+
+
+
 
 
         <div class="field">
-        <label class="label">direccion </label>
-        <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text" placeholder="calle: 33 carrera: A28 numero 29-13 piso 2">
-            <span class="icon is-small is-left">
-                <i class="fas fa-user"></i>
-            </span>
-            <span class="icon is-small is-right">
-                <i class="fas fa-check"></i>
-            </span>
+            <label class="label">numero de celular </label>
+            <div class="control has-icons-left has-icons-right">
+                <input class="input is-success" id="n_celular" type="text" placeholder="ejemplo : 3108507420">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                </span>
+                <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                </span>
+            </div>
         </div>
-       
-    </div> 
 
-    <div class="field">
-        <label class="label">genero</label>
-        <div class="control">
-            <div class="select">
-                <select>
-                    <option>seleciona tu genero </option>
-                    <option>hombre</option>
-                    <option>mujer</option>
-                    <option>no binario </option>
-                </select>
+
+        <div class="field">
+            <label class="label">direccion </label>
+            <div class="control has-icons-left has-icons-right">
+                <input class="input is-success" id="direccion" type="text" placeholder="calle: 33 carrera: A28 numero 29-13 piso 2">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                </span>
+                <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                </span>
+            </div>
+
+        </div>
+
+        <div class="field">
+            <label class="label">genero</label>
+            <div class="control">
+                <div class="select">
+                    <select id="genero">
+                        <option value="genero">seleciona tu genero </option>
+                        <option value="hombre">hombre</option>
+                        <option value="mujer">mujer</option>
+                        <option value="no_binario">no binario </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="field">
+            <div class="control">
+                <label class="checkbox">
+                    <input type="checkbox" id="terminosycondiciones">
+                    yo acepto los <a href="#">terminos y condiciones</a>
+                </label>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="control">
+                <label class="radio">
+                    <input type="radio" name="question">
+                    si
+                </label>
+                <label class="radio">
+                    <input type="radio" name="question">
+                    No
+                </label>
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-link">Subir</button>
+            </div>
+            <div class="control">
+                <button class="button is-link is-light">Cancelar</button>
             </div>
         </div>
     </div>
-
-
-
-
-    <div class="field">
-        <div class="control">
-            <label class="checkbox">
-                <input type="checkbox">
-                yo acepto los <a href="#">terminos y condiciones</a>
-            </label>
-        </div>
-    </div>
-
-    <div class="field">
-        <div class="control">
-            <label class="radio">
-                <input type="radio" name="question">
-                si
-            </label>
-            <label class="radio">
-                <input type="radio" name="question">
-                No
-            </label>
-        </div>
-    </div>
-
-    <div class="field is-grouped">
-        <div class="control">
-            <button class="button is-link">Subir</button>
-        </div>
-        <div class="control">
-            <button class="button is-link is-light">Cancelar</button>
-        </div>
-    </div>
-  </div>

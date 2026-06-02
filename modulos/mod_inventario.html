@@ -2,125 +2,123 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-  <title> inventario</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <title> inventario</title>
 </head>
 
 <body>
-          <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a class="navbar-item"> inventario </a>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item"> inventario </a>
 
-    </div>
-    <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary" href="../index.html">
-            <strong>home</strong>
-          </a>
         </div>
-      </div>
-    </div>
-
-<hr>
-
-<div class="columns is-multiline">
-
-    <div class="column is-half">
-        <div class="field">
-            <label class="label">Nombre producto</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="arroz diana ">
-            </div>
-        </div>
-    </div>
-
-    <div class="column is-half">
-        <div class="field">
-            <label class="label">codigo producto</label>
-            <div class="control">
-                <input class="input" type="text" placeholder=" id 770-441728492">
-            </div>
-        </div>
-    </div>
-
-    <div class="column is-half">
-        <div class="field">
-            <label class="label">precio unitario</label>
-            <div class="control">
-                <input class="input" type="text" placeholder="4250$">
-            </div>
-        </div>
-    </div>
-
-    <div class="column is-half">
-        <div class="field">
-            <label class="label">cantidad del producto </label>
-            <div class="control">
-                <input class="input" type="email" placeholder="100">
-            </div>
-        </div>
-    </div>
-
-    <div class="column is-half">
-        <div class="field">
-            <label class="label">unidad medida </label>
-            <div class="control">
-                <div class="select is-fullwidth">
-                    <select>
-                        <option>Selecciona </option>
-                        <option>mg</option>
-                        <option>ml</option>
-                        <option>kg</option>
-                        <option>li</option>
-                        <option>otros</option>
-                    </select>
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a class="button is-primary" href="../index.html">
+                        <strong>home</strong>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="column is-half">
-        <div class="field">
-            <label class="label">categoria del producto </label>
-            <div class="control">
-              
-                <div class="control">
-                 <div class="select is-fullwidth">
-                <select>
-                   <option>Selecciona </option>
-                <option>grano</option>
-                <option>aseo</option>
-                <option>frio</option>
-                <option>liquido</option>
-                <option>pesado</option>
-                </select>
+        <hr>
+
+        <div class="columns is-multiline">
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">Nombre producto</label>
+                    <div class="control">
+                        <input class="input" id="n_producto" type="text" placeholder="arroz diana ">
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>
-</div>
-    <div class="column is-full">
-        <div class="field">
-            <label class="label">marca del producto</label>
-            <div class="control">
-                <textarea class="textarea" placeholder="playa rica ( panela )"></textarea>
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">codigo producto</label>
+                    <div class="control">
+                        <input class="input" id="c_producto" type="text" placeholder=" id 770-441728492">
+                    </div>
+                </div>
             </div>
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">precio unitario</label>
+                    <div class="control">
+                        <input class="input" id="p_unit" type="text" placeholder="4250$">
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">cantidad del producto </label>
+                    <div class="control">
+                        <input class="input" id="cantidad_producto" type="email" placeholder="100">
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">unidad medida </label>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select id="unidad_medida">
+                                <option value="mg">mg</option>
+                                <option value="ml">ml</option>
+                                <option value="kg">kg</option>
+                                <option value="li">li</option>
+                                <option value="otros">otros</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <div class="field">
+                    <label class="label">categoria del producto </label>
+                    <div class="control">
+
+                        <div class="control">
+                            <div class="select is-fullwidth">
+                                <select id="categoria_producto">
+                                    <option value="grano">grano</option>
+                                    <option value="aseo">aseo</option>
+                                    <option value="frio">frio</option>
+                                    <option value="liquido">liquido</option>
+                                    <option value="pesado">pesado</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-full">
+                <div class="field">
+                    <label class="label">marca del producto</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder="playa rica ( panela )"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column is-half">
+                <button class="button is-link is-fullwidth">
+                    Subir
+                </button>
+            </div>
+
+            <div class="column is-half">
+                <button class="button is-light is-fullwidth">
+                    Cancelar
+                </button>
+            </div>
+
         </div>
-    </div>
-
-    <div class="column is-half">
-        <button class="button is-link is-fullwidth">
-            Subir
-        </button>
-    </div>
-
-    <div class="column is-half">
-        <button class="button is-light is-fullwidth">
-            Cancelar
-        </button>
-    </div>
-
-</div>

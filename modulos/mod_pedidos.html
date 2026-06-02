@@ -32,7 +32,7 @@
         <div class="field">
             <label class="label">Nombre</label>
             <div class="control">
-                <input class="input" type="text" placeholder="Samuel">
+                <input class="input" type="text" id="nom_pedidos" placeholder="Samuel">
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
         <div class="field">
             <label class="label">Dirección</label>
             <div class="control">
-                <input class="input" type="text" placeholder="Calle 33 #29-13 Piso 2">
+                <input class="input" type="text" id="direc_pedidos" placeholder="Calle 33 #29-13 Piso 2">
             </div>
         </div>
     </div>
@@ -50,7 +50,7 @@
         <div class="field">
             <label class="label">Teléfono</label>
             <div class="control">
-                <input class="input" type="text" placeholder="3108507420">
+                <input class="input" type="text" id="telefono" placeholder="3108507420">
             </div>
         </div>
     </div>
@@ -59,7 +59,7 @@
         <div class="field">
             <label class="label">Email</label>
             <div class="control">
-                <input class="input" type="email" placeholder="ejemplo@gmail.com">
+                <input class="input" type="email" id="email_pedidos" placeholder="ejemplo@gmail.com">
             </div>
         </div>
     </div>
@@ -69,12 +69,12 @@
             <label class="label">Método de pago</label>
             <div class="control">
                 <div class="select is-fullwidth">
-                    <select>
-                        <option>Selecciona método de pago</option>
-                        <option>Efectivo</option>
-                        <option>Tarjeta</option>
-                        <option>Nequi</option>
-                        <option>Daviplata</option>
+                    <select id="metodo_pago">
+                        
+                        <option value="efectivo">Efectivo</option>
+                        <option value="tarjeta">Tarjeta</option>
+                        <option value="nequi">Nequi</option>
+                        <option value="daviplata">Daviplata</option>
                     </select>
                 </div>
             </div>
@@ -85,7 +85,7 @@
         <div class="field">
             <label class="label">Pedido</label>
             <div class="control">
-                <input class="input" type="text" placeholder="Escribe tu pedido">
+                <input class="input" type="text" id="pedido" placeholder="Escribe tu pedido">
             </div>
         </div>
     </div>
@@ -94,7 +94,7 @@
         <div class="field">
             <label class="label">Referencias</label>
             <div class="control">
-                <textarea class="textarea" placeholder="Casa blanca al lado de la tienda"></textarea>
+                <textarea class="textarea"  id="referencias" placeholder="Casa blanca al lado de la tienda"></textarea>
             </div>
         </div>
     </div>
