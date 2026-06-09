@@ -6,3 +6,43 @@ let unidad_medida = document.getElementById("unidad_medida").value;
 let categoria_producto = document.getElementById("categoria_producto").value;
 
 
+
+function ValidarDatos(){
+    if(
+        Codigo_Proucto != '' &&
+        Nombre_producto != '' &&
+        Precio_unitrio != '' &&
+        Cntidad_Producto != '' &&
+        Marca_Producto != '' &&
+        Categoria_Poducto != '' &&
+        Unidad_Medida != ''
+    ){
+        if(Codigo_Producto == /[a-zA-Z]/){
+            console.log("Los datos ingresados son incorrectos");
+        }
+
+        if(Nombre_producto == /[0-9]/){
+            console.log("Los datos ingresados son incorrectos");
+        }
+
+        if(Precio_unitario == /[a-zA-Z]/){
+            console.log("Los datos ingresados son incorrectos");
+        }
+
+        if(Cantidad_Producto == /[a-zA-Z]/){
+            console.log("Los datos ingresados son incorrectos");
+        }
+
+        if(Categoria_Producto == /[0-9]/){
+            console.log("Los datos ingresados son incorrectos");
+        }
+
+        if(Unidad_Medida == /[0-9]/){
+            console.log("Los datos ingresados son incorrectos");
+        }
+
+    }
+    else{
+        console.log("Ingrese todos los datos");
+    }
+}
