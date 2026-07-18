@@ -1,48 +1,92 @@
-let n_producto = document.getElementById("n_producto").value;
-let c_producto = document.getElementById("c_producto").value;
-let p_unit = document.getElementById("p_unit").value;
-let cantidad_producto = document.getElementById("cantidad_producto").value;
-let unidad_medida = document.getElementById("unidad_medida").value;
-let categoria_producto = document.getElementById("categoria_producto").value;
 
+function ValidarDatos() {
+    let nombre_producto = document.getElementById("nombre_producto").value;
+    let Codigo_Producto = document.getElementById("Codigo_Producto").value;
+    let precio_unitario = document.getElementById("precio_unitario").value;
+    let cantidad_producto = document.getElementById("cantidad_producto").value;
+    let unidad_medida = document.getElementById("unidad_medida").value;
 
-
-function ValidarDatos(){
-    if(
-        Codigo_Proucto != '' &&
-        Nombre_producto != '' &&
-        Precio_unitrio != '' &&
-        Cntidad_Producto != '' &&
-        Marca_Producto != '' &&
-        Categoria_Poducto != '' &&
-        Unidad_Medida != ''
-    ){
-        if(Codigo_Producto == /[a-zA-Z]/){
-            console.log("Los datos ingresados son incorrectos");
-        }
-
-        if(Nombre_producto == /[0-9]/){
-            console.log("Los datos ingresados son incorrectos");
-        }
-
-        if(Precio_unitario == /[a-zA-Z]/){
-            console.log("Los datos ingresados son incorrectos");
-        }
-
-        if(Cantidad_Producto == /[a-zA-Z]/){
-            console.log("Los datos ingresados son incorrectos");
-        }
-
-        if(Categoria_Producto == /[0-9]/){
-            console.log("Los datos ingresados son incorrectos");
-        }
-
-        if(Unidad_Medida == /[0-9]/){
-            console.log("Los datos ingresados son incorrectos");
-        }
-
+    if (!categoria_producto || !codigo_producto || !nombre_producto || !cantidad_producto || !precio_unitario) {
+        Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: "Campos Incompletos",
+            showConfirmButton: false,
+            timer: 1500
+        });
     }
-    else{
-        console.log("Ingrese todos los datos");
+
+
+    else {
+        console.log(
+            `Informacion del Producto: \n
+            ${Codigo_Producto} \n
+            ${nombre_producto} \n
+            ${descripcion_producto} \n
+            ${cantidad_producto} \n
+            ${precio_unitario}`
+        );
+
+        if (!/^[a-zA-Z]+$/.test(categoria)) {
+            console.log("Categoria debe contener letras")
+            Swal.fire({
+                title: "Categoria debe contener letras",
+                icon: "error"
+            });
+            return;
+        }
+
+        if (!/^[a-zA-Z]+$/.test(precio_unitario)) {
+            console.log("precio unitario debe contener letras")
+            Swal.fire({
+                title: "precio unitario debe contener letras",
+                icon: "error"
+            });
+            return;
+        }
+
+        if (!/^\d+$/.test(Codigo_Producto)) {
+            Swal.fire({
+                title: "Codigo del producto debe contener números",
+                icon: "error"
+            });
+            return;
+        }
+
+        if (!/^\d+$/.test(unidad_medida)) {
+            Swal.fire({
+                title: "unidad de medida debe contener números",
+                icon: "error"
+            });
+            return;
+        }
+
+        if (!/^\d+$/.test(nombre_producto)) {
+            Swal.fire({
+                title: "nombre del producto debe contener números",
+                icon: "error"
+            });
+            return;
+        }
+
+        if (!/^\d+$/.test(categoria_producto)) {
+            Swal.fire({
+                title: "categoria del producto debe contener números",
+                icon: "error"
+            });
+            return;
+        }
+
+
+        Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Informacion Guardada Correctamente en la base de datos ",
+            showConfirmButton: false,
+            timer: 1500
+        });
     }
 }
+
+
+document.getElementById("Subir").onclick = ValidarDatos;
