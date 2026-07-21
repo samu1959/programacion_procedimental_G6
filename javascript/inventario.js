@@ -1,12 +1,11 @@
-
 function ValidarDatos() {
     let nombre_producto = document.getElementById("nombre_producto").value;
-    let Codigo_Producto = document.getElementById("Codigo_Producto").value;
+    let codigo_producto = document.getElementById("codigo_producto").value;
     let precio_unitario = document.getElementById("precio_unitario").value;
-    let cantidad_producto = document.getElementById("cantidad_producto").value;
-    let unidad_medida = document.getElementById("unidad_medida").value;
+    let cantidad_producto = document.getElementById("cantidad_producto").value; 
+    let descripcion_producto = document.getElementById("descripcion_producto").value;
 
-    if (!categoria_producto || !codigo_producto || !nombre_producto || !cantidad_producto || !precio_unitario) {
+    if (!codigo_producto || !nombre_producto || !cantidad_producto || !precio_unitario) {
         Swal.fire({
             position: "top-end",
             icon: "error",
@@ -20,58 +19,56 @@ function ValidarDatos() {
     else {
         console.log(
             `Informacion del Producto: \n
-            ${Codigo_Producto} \n
+            ${codigo_producto} \n
             ${nombre_producto} \n
             ${descripcion_producto} \n
             ${cantidad_producto} \n
             ${precio_unitario}`
         );
 
-        if (!/^[a-zA-Z]+$/.test(categoria)) {
-            console.log("Categoria debe contener letras")
+        if (!/^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]+$/.test(nombre_producto)) {
             Swal.fire({
-                title: "Categoria debe contener letras",
+                title: "nombre del producto debe contener solo letras",
                 icon: "error"
             });
             return;
         }
 
-        if (!/^[a-zA-Z]+$/.test(precio_unitario)) {
-            console.log("precio unitario debe contener letras")
+          if (!/^\d+$/.test(codigo_producto)) {
             Swal.fire({
-                title: "precio unitario debe contener letras",
+                title: "Codigo del producto debe contener solo números",
                 icon: "error"
             });
             return;
         }
 
-        if (!/^\d+$/.test(Codigo_Producto)) {
+
+        if (!/^\d+$/.test(precio_unitario)) {
+            console.log("precio unitario debe contener solo números")
             Swal.fire({
-                title: "Codigo del producto debe contener números",
+                title: "precio unitario debe contener solo números",
                 icon: "error"
             });
             return;
         }
 
-        if (!/^\d+$/.test(unidad_medida)) {
+          if (!/^\d+$/.test(cantidad_producto)) {
+            console.log("precio unitario debe contener solo números")
             Swal.fire({
-                title: "unidad de medida debe contener números",
+                title: "cantidad del producto debe contener solo números",
                 icon: "error"
             });
             return;
         }
 
-        if (!/^\d+$/.test(nombre_producto)) {
-            Swal.fire({
-                title: "nombre del producto debe contener números",
-                icon: "error"
-            });
-            return;
-        }
+      
 
-        if (!/^\d+$/.test(categoria_producto)) {
+
+
+
+        if (!/^[a-zA-ZÁÉÍÓÚÑáéíóúñ0-9\s()]+$/.test(descripcion_producto)) {
             Swal.fire({
-                title: "categoria del producto debe contener números",
+                title: "descripcion del producto tiene caracteres no permitidos",
                 icon: "error"
             });
             return;

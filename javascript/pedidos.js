@@ -1,22 +1,22 @@
-
-
 function ValidarDatos() {
 
-    let nombre_pedidos = document.getElementById("nombre_pedidos").value;
-     let direccion = document.getElementById("direccion").value;
-    let telefono = document.getElementById("n_celular").value;
-        let email_pedidos = document.getElementById("email_pedidos").value;
-    let metodo_pago = document.getElementById("metodo_pago").value;
-      let pedido = document.getElementById("pedido").value;
-     let referencias = document.getElementById("referencias").value;
 
-   
+    let nombre_pedidos = document.getElementById("nom_pedidos").value;
+    let direccion = document.getElementById("direc_pedidos").value;
+    let telefono = document.getElementById("telefono").value;
+    let email_pedidos = document.getElementById("email_pedidos").value;
+    let metodo_pago = document.getElementById("metodo_pago").value;
+    let pedido = document.getElementById("pedido").value;
+    let referencias = document.getElementById("referencias").value;
+
+
     const regexNombre = /^[a-zA-ZÁÉÍÓÚÑáéíóúñ\s]+$/;
-     const regexTelefono = /^\+?\d{1,3}[\s-]?\d{6,10}$/;
+    const regexTelefono = /^\+?\d{1,3}[\s-]?\d{6,10}$/;
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const regexNoVacio = /\S+/;
+    const regexPedido = /^[a-zA-ZÁÉÍÓÚÑáéíóúñ0-9\s,]+$/;
 
-    
+
     if (
         !nombre_pedidos || !direccion || !telefono ||
         !email_pedidos || !metodo_pago ||
@@ -33,7 +33,7 @@ function ValidarDatos() {
         return;
     }
 
-    
+
     if  (!regexNombre.test(nombre_pedidos.trim())) {
         Swal.fire({
             position: "top-end",
@@ -46,8 +46,8 @@ function ValidarDatos() {
         return;
     }
 
-   
-      if (!regexNoVacio.test(direccion.trim())) {
+
+    if (!regexNoVacio.test(direccion.trim())) {
         Swal.fire({
             position: "top-end",
             icon: "error",
@@ -59,8 +59,8 @@ function ValidarDatos() {
         return;
     }
 
-    
-     if (!regexTelefono.test(telefono.trim())) {
+
+    if (!regexTelefono.test(telefono.trim())) {
         Swal.fire({
             position: "top-end",
             icon: "error",
@@ -72,7 +72,7 @@ function ValidarDatos() {
         return;
     }
 
-    
+
     if (!regexEmail.test(email_pedidos.trim())) {
         Swal.fire({
             position: "top-end",
@@ -85,8 +85,8 @@ function ValidarDatos() {
         return;
     }
 
-    
-      if (!regexNombre.test(metodo_pago.trim())) {
+
+    if (!regexNombre.test(metodo_pago.trim())) {
         Swal.fire({
             position: "top-end",
             icon: "error",
@@ -98,21 +98,21 @@ function ValidarDatos() {
         return;
     }
 
-    
-    if (!regexNombre.test(pedido.trim())) {
+
+    if (!regexPedido.test(pedido.trim())) {
         Swal.fire({
             position: "top-end",
             icon: "error",
             title: "Pedido inválido",
-            text: "El pedido solo puede contener letras y espacios.",
+            text: "El pedido contiene caracteres no permitidos.",
             showConfirmButton: false,
             timer: 1500
         });
         return;
     }
 
-   
-     console.log(`
+
+    console.log(`
         Información del pedido:
 
         Nombre del pedido: ${nombre_pedidos}
@@ -133,4 +133,5 @@ function ValidarDatos() {
     });
 }
 
-  Document.getElementById("subir").onclick=ValidarDatos
+
+document.getElementById("Subir").onclick = ValidarDatos;
